@@ -1,10 +1,13 @@
 ## MyFitnessPal.com Scraper and Parser
 ======================================
 
-* Scraps the site (myfitnesspal.com)
-* Gets the pages according to regex /food/calories/.*
-* Parses the page to get info on a food item about calories, iron, vitamins etc
-* Stores them in a csv file (delimiter='|').
+* Scraps food diary on [MyFitnessPal](myfitnesspal.com)
+* Gets pages of the form /food/diary/[USERNAME]?date=.\*
+* Parses the page to get whatever information is available - e.g. macros,
+  serving size
+* The crawler only downloads the raw HTMLs to data/
+* `getDiary(htmlfile)` parses the file and returns a pandas.DataFrame with all
+  the info
 
 #### Dependencies
 -----------------
@@ -12,6 +15,8 @@
 * scrapy
 * BeautifulSoup
 * HTMLParser
+* NumPy
+* Pandas
 
 #### Run
 -----------------
