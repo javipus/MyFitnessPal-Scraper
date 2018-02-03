@@ -20,4 +20,12 @@
 
 #### Run
 -----------------
-`$ scrapy crawl Myfitnesspal`
+Replace `USERNAME` in `myfitnesspal/spiders/spider1.py` and run `$ scrapy crawl Myfitnesspal`
+
+### TODO
+-----------------
+* Proper login
+* Parse meal times e.g. Lunch, Dinner
+* Parse micronutrients in main table regardless of column order
+* Parse goal, total and excercise calories and macros
+* Scrape database to get micronutrients for all foods
